@@ -36,4 +36,5 @@ outputs = [
 ]
 
 for (nums, target), expected in zip(inputs, outputs):
-    assert two_sum(nums, target) == expected
+    result = two_sum(nums, target)
+    assert result == expected, f"Expected {expected}, got {result}"
