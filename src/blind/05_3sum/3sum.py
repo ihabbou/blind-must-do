@@ -9,7 +9,7 @@ def threesum(nums: List[int]) -> List[List[int]]:
     sums = set()
 
     for i, n in enumerate(nums):
-        for j, m in enumerate(nums):
+        for j, m in list(enumerate(nums))[i+1:]:
             if (i != j):
                 ppairs[n + m] = (i, j)
 
